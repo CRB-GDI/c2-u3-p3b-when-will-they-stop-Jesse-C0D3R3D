@@ -29,16 +29,33 @@ namespace ProgrammingAssignment2
 				// extract input values from string
 				BuildLinkedListFromString(input);
 
-				// Add your code between this comment
-				// and the comment below. You can of
-				// course add more space between the
-				// comments as needed
+                // Add your code between this comment
+                // and the comment below. You can of
+                // course add more space between the
+                // comments as needed
+
+                int Count = 0;
+                int numbersSum = 0;
+                int value = GetValue();
+                float mean = 0f;
+                while (value != -1)
+                {
+                    //Add count to itself 
+                    Count++;
+                    //Update the sum by adding the number from GetValue()
+                    numbersSum = numbersSum + value;
+                    value = GetValue();
+                }
+                if (Count > 0)
+                {
+                    mean = (float)numbersSum / Count;
+                }
+				Console.WriteLine(Count + " " + mean); 
 
 
-
-				// Don't add or modify any code below
-				// this comment
-				input = Console.ReadLine();
+                // Don't add or modify any code below
+                // this comment
+                input = Console.ReadLine();
 			}
 		}
 
